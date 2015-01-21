@@ -1,4 +1,4 @@
-.TH GENUP-LITE 8 "Version 1.0.0: January 2015"
+.TH GENUP-LITE 8 "Version 1.0.1: January 2015"
 .SH NAME
 genup-lite \- update Portage tree, and all installed packages
 .SH SYNOPSIS
@@ -146,6 +146,10 @@ Because of this, \fBgenup-lite\fR will attempt to
 automatically resume any \fBemerge\fR(1) operation with parallel make
 inhibited, should the original operation fail. A warning is issued if this
 happens.
+
+In a similar fashion, if you are using distributed compilation
+with the \fBdistcc\fR and \fBdistcc-pump\fR features, these will be
+automatically inhibited if operations are retried.
 .SH AUTOMATING GENUP-LITE
 Should you wish to run \fBgenup-lite\fR automatically, you need to ensure it has
 an appropriate environment.
